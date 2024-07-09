@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 #define MAXLINE 100
-int getlines(char line[], int lim);
-void copy(char to[], char from[]);
+int getlines(char line[], int lim);//A funtion for getting lines
+void copy(char to[], char from[]);//A function for copying a string into another string
 //not considering newline to be a part of the line whereas in book they have
 
 int main(){
@@ -10,7 +10,9 @@ int main(){
     char line[MAXLINE];
     char max_len[MAXLINE];
     max = 0;
-
+    
+    /*    Working
+    Loops through till there are lines to be read and if it encounters a line longer than the previous ones it stores it into the string max_len*/
     while((len = getlines(line, MAXLINE)) > 0){
         if(len > max){
             max = len;
@@ -23,6 +25,10 @@ int main(){
     }
 }
 
+/*     Working
+Takes a string and a number specifying the size of the string*/
+/*And stores the input into the string till it encounters an EOF or newline character*/
+/*Also returns the length of the string*/
 int getlines(char line[], int lim){
     int i, c;
 
@@ -34,6 +40,8 @@ int getlines(char line[], int lim){
     return i;
 }
 
+/*    Working
+Takes two strings the copies from the string from to the string to*/
 void copy(char to[], char from[]){
     int i;
     i = 0;
