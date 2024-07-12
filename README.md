@@ -17,7 +17,11 @@ Then you can clone the directory onto your computer using the command :
 After the directory is successfully cloned, you'll need to download a compiler to compile the code into executable files before running them. For that, you can download **mingw** compiler compatible for your desktop. 
 
 In the terminal:
-     + To compile the code. Use the command:
+
++ To compile the code. Use the command:
+
         > gcc file_name -o executable_file_name
-     + And then to run it. Use the command:
+
++ And then to run it. Use the command:
+
         > gcc ./executable_file_name
