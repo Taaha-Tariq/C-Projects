@@ -1,19 +1,22 @@
 #include <stdio.h>
 
-#define MAX_LEN 20
-#define WH_TO_WRAP 30
+#define MAX_LEN 20 //The size of the word string
+#define WH_TO_WRAP 30 //The number of columns after which the line should wrap to the next line
 
 int c;
-char words[MAX_LEN];
+char words[MAX_LEN]; //string for storing words
 
-int len(char s[]);
-void getwords(void);
-void clear(char s[]);
+int len(char s[]); //Function for returning the size of the string
+void getwords(void); //functions for storing words into the global string.
+void clear(char s[]); //function for emptying the words string.
 
 int main(){
     int count, i;
     count = i = 0;
-
+    
+    /*    Working
+    Reads from input till it encounters the EOF character
+    It first stores each word into a string then checks if there are enough columns left to accomodate the stored word in the current line. If there are then it prints the word, else it goes to the next line and then prints the word.*/
     while((c = getchar()) != EOF){
         if(c != '\n' && c != ' ' && c != '\t')
             words[i++] = c;
@@ -49,6 +52,8 @@ int main(){
     }
 }
 
+/*    Working
+loops and stores words in a string till it encounters a blank or a tab or a newline character.*/
 void getwords(void){
     int i;
     i = 0;
@@ -58,6 +63,8 @@ void getwords(void){
         words[i++] = c;
 }
 
+/*    Working
+takes a string and loops backwards setting each position equal to '\0' and empties the string.*/
 void clear(char s[]){
     int i;
 
@@ -66,6 +73,8 @@ void clear(char s[]){
     return;
 }
 
+/*    Working
+loops through a string till it encounters '\0' and returns its length.*/
 int len(char s[]){
     int i;
     i = 0;

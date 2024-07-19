@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void squeeze(char s[], char t[]);
+void squeeze(char s[], char t[]);// Remove the characters from string s that matches any of the characters from the string t
 
 int main(){
     char name[] = "Hello i like gaming";
@@ -10,6 +10,10 @@ int main(){
     printf("%s", name);
 }
 
+/*    Working 
+Loops through the first string and checks each character of the first string against all the characters of the second string.
+If a character matches with any of the characters from the second string, that character is ignored.
+And if it doesnt match with any of the characters from string t then it is stored in the string s.*/
 void squeeze(char s[], char t[]){
     int i, j, count, k;
 

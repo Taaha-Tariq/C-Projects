@@ -9,6 +9,8 @@ int main(){
     printf("%d", any(name, vowels));
 }
 
+/*     Working
+Loops through the first string and for each character of the first string goes into a second loop that loops through the second string checking each character of the second string against that character of the first string and the first character of the first string that matches any character of the second string, its index is returned. If not one of the character matches, then -1 is returned.*/
 int any(char s[], char t[]){
     int i, k, found;
 
